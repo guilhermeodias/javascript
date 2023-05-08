@@ -5,3 +5,20 @@ if (weekDay === "segunda-feira" || weekDay === "terça-feira" || weekDay === "qu
 } else {
     console.log("FINALMENTE, descanso merecido! UwU!");
 }
+
+let candidata = "reprovada";
+
+switch (candidata) {
+
+    case "aprovada":
+        console.log("Parabéns, você está no grupo de pessoas aprovadas!");
+    break;
+    case "lista":
+        console.log("Você está na nossa lista de espera");
+    break;
+    case "reprovada":
+        console.log("Infelizmente, você reprovou.");
+    break;
+    default:
+        console.log("Informação incorreta.");
+}
