@@ -83,20 +83,49 @@ if (note >= 90 && note < 100) {
     console.log("Erro de Nota");
 }
 
-let grade = 176;
+let isEven = false;
 
-if (grade < 0 || grade > 100) {
-  console.log("Erro, nota incorreta!");
-} else if (grade >= 90) {
-  console.log("A");
-} else if (grade >= 80) {
-  console.log("B");
-} else if (grade >= 70) {
-  console.log("C");
-} else if (grade >= 60) {
-  console.log("D");
-} else if (grade >= 50) {
-  console.log("E");
-} else {
-  console.log("F");
+if ((a % 2 === 0) || (b % 2 === 0) || (c % 2 === 0)) {
+    isEven = true;
 }
+console.log(isEven);
+
+
+let isOdd = false;
+
+if ((a % 2 !== 0) || (b % 2 !== 0) || (c % 2 !== 0)) {
+    isOdd = true;
+}
+console.log(isOdd);
+
+
+let aliquotINSS;
+let aliquotIR;
+
+let grossSalary = 7000.00;
+
+if (grossSalary <= 1556.94) {
+  aliquotINSS = grossSalary * 0.08;
+} else if (grossSalary <= 2594.92) {
+  aliquotINSS = grossSalary * 0.09;
+} else if (grossSalary <= 5189.82) {
+  aliquotINSS = grossSalary * 0.11;
+} else {
+  aliquotINSS = 570.88;
+}
+
+let baseSalary = grossSalary - aliquotINSS;
+
+if (baseSalary <= 1903.98) {
+  aliquotIR = 0;
+} else if (baseSalary <= 2826.65) {
+  aliquotIR = (baseSalary * 0.075) - 142.80;
+} else if (baseSalary <= 3751.05) {
+  aliquotIR = (baseSalary * 0.15) - 354.80;
+} else if (baseSalary <= 4664.68) {
+  aliquotIR = (baseSalary * 0.225) - 636.13;
+} else {
+  aliquotIR = (baseSalary * 0.275) - 869.36;
+};
+
+console.log("Salário: " + (baseSalary - aliquotIR));
